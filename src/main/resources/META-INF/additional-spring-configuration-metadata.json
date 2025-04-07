@@ -1,0 +1,72 @@
+{"properties": [
+  {
+    "name": "application.name",
+    "type": "java.lang.String",
+    "description": "A description for 'application.name'"
+  },
+  {
+    "name": "datasource.driver-class-name",
+    "type": "java.lang.String",
+    "description": "A description for 'datasource.driver-class-name'"
+  },
+  {
+    "name": "jpa.hibernate.ddl-auto",
+    "type": "java.lang.String",
+    "description": "A description for 'jpa.hibernate.ddl-auto'"
+  },
+  {
+    "name": "level.root",
+    "type": "java.lang.String",
+    "description": "A description for 'level.root'"
+  },
+  {
+    "name": "spring-doc.paths-to-match",
+    "type": "java.lang.String",
+    "description": "A description for 'spring-doc.paths-to-match'"
+  },
+  {
+    "name": "datasource.url",
+    "type": "java.lang.String",
+    "description": "A description for 'datasource.url'"
+  },
+  {
+    "name": "datasource.username",
+    "type": "java.lang.String",
+    "description": "A description for 'datasource.username'"
+  },
+  {
+    "name": "datasource.password",
+    "type": "java.lang.String",
+    "description": "A description for 'datasource.password'"
+  },
+  {
+    "name": "jpa.properties.hibernate",
+    "type": "java.lang.String",
+    "description": "A description for 'jpa.properties.hibernate'"
+  },
+  {
+    "name": "jpa.show-sql",
+    "type": "java.lang.String",
+    "description": "A description for 'jpa.show-sql'"
+  },
+  {
+    "name": "jpa.open-in-view",
+    "type": "java.lang.String",
+    "description": "A description for 'jpa.open-in-view'"
+  },
+  {
+    "name": "jpa.logging",
+    "type": "java.lang.String",
+    "description": "A description for 'jpa.logging'"
+  },
+  {
+    "name": "spring-doc.swagger-ui.use-root-path",
+    "type": "java.lang.String",
+    "description": "A description for 'spring-doc.swagger-ui.use-root-path'"
+  },
+  {
+    "name": "spring.logging.level.root",
+    "type": "java.lang.String",
+    "description": "A description for 'spring.logging.level.root'"
+  }
+]}
