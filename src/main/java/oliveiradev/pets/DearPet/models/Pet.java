@@ -1,5 +1,6 @@
 package oliveiradev.pets.DearPet.models;
 
+import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
@@ -19,16 +20,25 @@ public class Pet {
     private String raca;
     private String porte;
     private String sexo;
+
+    @Column(name = "data_nascimento")
     private String dataNascimento;
 
     @ManyToOne
     @JoinColumn(name = "dono_id", nullable = false)
     private Pessoa dono;
 
+    @ManyToOne
+    @JoinColumn(name = "profissional_id")
+    private Profissional profissional;
+
+    @Column(name = "nome_profissional")
+    private String nomeProfissional;
+
     public Pet() { } 
 
     public Pet(Long id, String nome, String especie, String raca, String porte, String sexo, String dataNascimento,
-            Pessoa dono) {
+            Pessoa dono, Profissional profissional, String nomeProfissional) {
         this.id = id;
         this.nome = nome;
         this.especie = especie;
@@ -37,6 +47,8 @@ public class Pet {
         this.sexo = sexo;
         this.dataNascimento = dataNascimento;
         this.dono = dono;
+        this.profissional = profissional;
+        this.nomeProfissional = nomeProfissional;
     }
 
     public Long getId() {
@@ -103,6 +115,22 @@ public class Pet {
         this.dono = dono;
     }
 
+    public Profissional getProfissional() {
+        return profissional;
+    }
+
+    public void setProfissional(Profissional profissional) {
+        this.profissional = profissional;
+    }
+
+    public String getNomeProfissional() {
+        return nomeProfissional;
+    }
+
+    public void setNomeProfissional(String nomeProfissional) {
+        this.nomeProfissional = nomeProfissional;
+    }
+
     @Override
     public int hashCode() {
         final int prime = 31;
@@ -115,6 +143,8 @@ public class Pet {
         result = prime * result + ((sexo == null) ? 0 : sexo.hashCode());
         result = prime * result + ((dataNascimento == null) ? 0 : dataNascimento.hashCode());
         result = prime * result + ((dono == null) ? 0 : dono.hashCode());
+        result = prime * result + ((profissional == null) ? 0 : profissional.hashCode());
+        result = prime * result + ((nomeProfissional == null) ? 0 : nomeProfissional.hashCode());
         return result;
     }
 
@@ -166,6 +196,16 @@ public class Pet {
             if (other.dono != null)
                 return false;
         } else if (!dono.equals(other.dono))
+            return false;
+        if (profissional == null) {
+            if (other.profissional != null)
+                return false;
+        } else if (!profissional.equals(other.profissional))
+            return false;
+        if (nomeProfissional == null) {
+            if (other.nomeProfissional != null)
+                return false;
+        } else if (!nomeProfissional.equals(other.nomeProfissional))
             return false;
         return true;
     }    

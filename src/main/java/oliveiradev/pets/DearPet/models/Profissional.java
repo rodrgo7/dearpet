@@ -20,7 +20,7 @@ public class Profissional {
 
     public Profissional() { }
 
-    public Profissional(Long id, String registroProfissional, String genero, String especialidade, String dataInicio, String dataFim, String observacoes) {
+    public Profissional(Long id, String nome, String registroProfissional, String genero, String especialidade, String dataInicio, String dataFim, String observacoes) {
         this.id = id;
         this.registroProfissional = registroProfissional;
         this.especialidade = especialidade;
