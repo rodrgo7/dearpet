@@ -22,7 +22,7 @@ import oliveiradev.pets.DearPet.models.Profissional;
 import oliveiradev.pets.DearPet.services.ProfissionalService;
 
 @RestController
-@RequestMapping("/api/profissionais")
+@RequestMapping("/v1/profissionais")
 @Tag(name = "Profissionais", description = "Endpoints para gerenciamento de profissionais")
 public class ProfissionalController {
     @Autowired
